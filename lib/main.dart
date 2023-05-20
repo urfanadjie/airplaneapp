@@ -1,32 +1,11 @@
+import 'package:airplaneapp/get_started.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:airplaneapp/splash_screen.dart';
 
 void main() {
   runApp(const MyApp());
-}
-
-class SplashScreen extends StatelessWidget {
-  const SplashScreen({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      backgroundColor: Colors.deepPurpleAccent,
-      body: Center(
-        child: Row(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            Image(
-                image: SvgPicture.asset('assets/icon/plane-tail.svg')
-            ),
-            Text("AIRPLANE", style: TextStyle(color: Colors.white, letterSpacing: 24, fontWeight: FontWeight.bold),),
-          ],
-        ),
-      )
-    );
-  }
-
 }
 
 class MyApp extends StatelessWidget {
@@ -56,7 +35,7 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.lightBlue.shade50),
         useMaterial3: true,
       ),
-      home: const SplashScreen(),
+      home: const GetStarted(),
     );
   }
 }
